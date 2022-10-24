@@ -1,0 +1,13 @@
+.profile-container{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-right: 30px;
+  position: relative;
+}
+
+@media screen and (max-width:920px) {
+  .profile-container{
+    margin-right: calc(0px + (30) * ( (100vw - 320px) / ( 920 - 320) ));
+  }
+}

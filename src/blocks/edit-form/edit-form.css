@@ -1,0 +1,16 @@
+.edit-form{
+  box-sizing: border-box;
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  padding: 36px 34px;
+}
+
+@media screen and (max-width:920px) {
+  .edit-form{
+    max-width: 282px;
+    padding: 21px 22px;
+  }
+}

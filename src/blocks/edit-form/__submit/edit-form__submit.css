@@ -1,0 +1,21 @@
+.edit-form__submit{
+  background: #000;
+  color: #fff;
+  height: 50px;
+  text-align: center;
+  border: none;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.edit-form__submit:hover{
+  transition: 0.5s;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+@media screen  and (max-width:920px) {
+  .edit-form__submit{
+    font-size: calc(14px + (18 - 14) * ( (100vw - 320px) / ( 920 - 320) ));
+  }
+}
