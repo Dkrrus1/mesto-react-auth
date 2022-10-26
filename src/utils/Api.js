@@ -1,7 +1,6 @@
 class Api {
   constructor(options) {
     this.baseUrl = options.baseUrl;
-    this.authUrl = options.authUrl;
     this._headers = options.headers;
   }
 
@@ -86,33 +85,10 @@ class Api {
       .then(this._errorCheck)
   }
 
-  registerUser(email, password) {
-    return fetch(`${this.authUrl}/signup`, {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({password, email})
-    })
-  }
-
-  loginUser(email, password) {
-    return fetch(`${this.authUrl}/signin`, {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({password, email})
-    })
-  }
-
 }
 
 export const api = new Api({
   baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-49',
-  authUrl: 'https://auth.nomoreparties.co',
   headers: {
     authorization: '6aa2b4e4-0910-4691-8a6e-cf24dcaa9898',
     'Content-Type': 'application/json'
